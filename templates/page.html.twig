@@ -1,0 +1,115 @@
+{% extends('base.html.twig') %}
+{% block body %}
+{#    <h1>Welcome!</h1>#}
+    <div class="page-top">
+        {% include 'header.html.twig' with {'manager':offer.manager, 'position':offer.position}%}
+
+        <div class="page-inner">
+
+            <div class="section">
+                <div class="container">
+                    <div class="apartments">
+                        {% for i in items%}
+                            <div class="apartment-card">
+                                <div class="apartment-card__header">
+                                    <div class="apartment-card__name">
+                                            {{ i.type }} - {{ i.square }} м²
+                                    </div>
+                                    <div class="apartment-card__location">
+                                        {{ i.complex }} , {{ i.house }}
+                                    </div>
+                                </div>
+                                <div class="apartment-card__body">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-8">
+                                            <div class="apartment-card__gallery owl-carousel owl-carousel--theme-psk owl-carousel-init-apartment-card-main" id="apartment-card-main-1" data-sync-carousel="#apartment-card-thumbs-1">
+                                                {% for img in i.images %}
+                                                    <div class="apartment-card__picture apartment-card__picture--main">
+                                                        <img class="img-fluid" src="{{ asset(img) }}" />
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-4">
+                                            <div class="apartment-card__content">
+                                                <div class="row row--around">
+                                                    <div class="col-12 d-none d-xl-block">
+                                                        <div class="apartment-card__gallery-thumbnails owl-carousel owl-carousel--theme-psk owl-carousel-init-apartment-card-thumbs" id="apartment-card-thumbs-1" data-sync-carousel="#apartment-card-main-1">
+                                                            {% for img in i.images %}
+                                                            <div class="apartment-card__picture apartment-card__picture--thumb">
+                                                                <img class="img-fluid" src="{{ asset(img) }}" />
+                                                            </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-7 col-xl-12">
+                                                        <div class="apartment-card__description">
+                                                            <div class="collapse-block collapse-block--type-apartment-card">
+                                                                <div class="collapse-block__content">
+                                                                    <div class="collapsing collapsing--type-apartment-card collapsing--color-white" id="apartment-card-description-1">
+                                                                        <div class="typography">
+                                                                            {{ i.description }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="collapse-block__action">
+                                                                    <a href="" class="link link--border link--border-solid link--color-navy" data-action="collapse" data-show-text="Показать описание" data-hide-text="Скрыть описание" data-target="#apartment-card-description-1">
+                                                                        Показать описание
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-5 col-xl-12">
+                                                        <div class="apartment-card__controls">
+                                                            <div class="apartment-card__buttons order-1 order-xl-0">
+                                                                <div class="apartment-card__button">
+                                                                    <button class="
+                                                            button
+                                                            button--color-red
+
+                                                        ">
+                                                                        <span class="button__text">
+                                                            Позвонить
+                                                        </span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="apartment-card__button">
+                                                                    <button class="
+                                                            button
+                                                            button--color-white
+
+                                                        ">
+                                                                        <span class="button__text">
+                                                            Написать
+                                                        </span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="apartment-card__favorite order-0 order-xl-1">
+                                                                <div class="favorite">
+
+                                                                    <svg class="favorite__icon" width="28px" height="23px">
+                                                                        <use xlink:href="svg-symbols.svg#heart"></use>
+                                                                    </svg>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- page-inner close -->
+    </div>
+    {% include 'footer.html.twig'%}
+{% endblock %}

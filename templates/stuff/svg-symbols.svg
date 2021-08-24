@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important;" class="root-svg-symbols-element">
+    <symbol id="arrow-left" viewBox="0 0 8 10">
+      <path d="M7 1L2 5L7 9" stroke="#fff" stroke-width="2"/>
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 8 10">
+      <path d="M1 1L6 5L1 9" stroke="#fff" stroke-width="2"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 28 23">
+      <path d="M11.8014 2.04286L14 3.87499L16.1985 2.04286C18.9887 -0.282237 23.0914 -0.0961332 25.6595 2.47202C28.4019 5.21437 28.4019 9.6606 25.6595 12.4029L16.463 21.5995C15.1027 22.9598 12.8973 22.9598 11.537 21.5995L2.34045 12.403C-0.401896 9.6606 -0.401897 5.21437 2.34045 2.47202C4.90861 -0.0961332 9.01132 -0.282238 11.8014 2.04286Z"/>
+    </symbol></svg>

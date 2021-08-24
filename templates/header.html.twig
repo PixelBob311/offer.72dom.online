@@ -1,0 +1,43 @@
+{#{% extends('page.html.twig') %}#}
+
+{% block header %}
+    <div class="header header--type-main">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__left">
+                    <div class="header__logo">
+                        <a href="/" class="link link--wrapper">
+                            <img class="img-fluid" src="{{ asset('images/general/logo.svg') }}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="manager-card">
+                        <div class="manager-card__inner">
+                            <div class="manager-card__content">
+                                <div class="manager-card__name">
+{#                                    Алексей Смирнов#}
+                                    {{ manager }}
+                                </div>
+                                <div class="manager-card__post">
+{#                                    Специалист отдела продаж#}
+                                    {{ position }}
+                                </div>
+                            </div>
+                            <div class="manager-card__actions">
+                                <div class="button-badge">
+                                    <div class="button-badge__badge">
+                                        <img class="button-badge__badge-icon" src="{{ asset('images/content/manager-icon.jpg') }}" />
+                                    </div>
+                                    <button class="button button--color-red">
+                                        <span class="button__text">Позвонить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
